@@ -1,6 +1,4 @@
 import "./globals.css";
-import Link from "next/link";
-import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,15 +7,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className="h-full antialiased"
-    >
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <main className="flex-1">
-          <Navbar />
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
