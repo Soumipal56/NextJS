@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,12 +14,8 @@ export default function RootLayout({ children }) {
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <div className="flex gap-6 p-4 bg-gray-100 border-b">
-          <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-          <Link href="/about" className="text-blue-600 hover:underline">About</Link>
-          <Link href="/contact" className="text-blue-600 hover:underline">Contact</Link>
-        </div>
         <main className="flex-1">
+          <Navbar />
           {children}
         </main>
       </body>
